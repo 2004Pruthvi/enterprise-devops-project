@@ -1,0 +1,6 @@
+iiitarget/
+.idea/
+.settings/
+.classpath
+.project
+*.log
