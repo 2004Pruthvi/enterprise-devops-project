@@ -5,10 +5,10 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/2004Pruthvi/enterprise-devops-project.git'
+                git branch: 'main',
+                url: 'https://github.com/2004Pruthvi/enterprise-devops-project.git'
             }
         }
-
         stage('Build') {
             steps {
                 sh 'mvn clean package'
