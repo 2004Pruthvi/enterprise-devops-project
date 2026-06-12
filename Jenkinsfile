@@ -21,12 +21,12 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                sh 'mvn sonar:sonar'
-            }
+        withSonarQubeEnv('SonarQube') {
+            sh '''
+            mvn sonar:sonar \
+            -Dsonar.projectKey=enterprise-devops-app
+            '''
         }
-
         stage('Deploy Artifact to Nexus') {
             steps {
                 sh 'mvn deploy'
