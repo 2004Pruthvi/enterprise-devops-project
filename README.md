@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This repository demonstrates an enterprise-grade **DevSecOps continuous integration and delivery (CI/CD) pipeline** built with **Jenkins**, **Maven**, **SonarQube**, **Sonatype Nexus**, **Docker**, and **Aqua Security Trivy**.
 
@@ -19,7 +19,7 @@ The pipeline establishes strict **quality gates** and **security scanners** dire
 
 ---
 
-## 🔄 DevSecOps Pipeline Architecture
+## DevSecOps Pipeline Architecture
 
 ```mermaid
 flowchart LR
@@ -34,7 +34,7 @@ flowchart LR
 
 ---
 
-## 🛡️ Pipeline Stages & Quality Gates
+## Pipeline Stages & Quality Gates
 
 | Pipeline Stage | Tool | Execution Details & Security Benefit |
 |---|---|---|
@@ -48,7 +48,7 @@ flowchart LR
 
 ---
 
-## 📂 Repository Layout
+## Repository Layout
 
 ```text
 .
@@ -63,7 +63,7 @@ flowchart LR
 
 ---
 
-## 🚀 Running the Pipeline Locally / On Jenkins
+## Running the Pipeline Locally / On Jenkins
 
 ### Prerequisites
 * Java JDK 17 & Apache Maven 3.9+
@@ -90,7 +90,7 @@ trivy image --severity HIGH,CRITICAL enterprise-devops-app:local
 
 ---
 
-## 💡 Lessons Learned & Engineering Principles
+## Lessons Learned & Engineering Principles
 
 1. **Shift-Left Security:** Catching security vulnerabilities during static code analysis (SonarQube) and image creation (Trivy) prevents high-severity CVEs from ever reaching runtime environments.
 2. **Immutable Artifacts:** Storing versioned binaries in Sonatype Nexus ensures auditability and guarantees that testing and deployment occur on identical binary files.
