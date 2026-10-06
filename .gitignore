@@ -4,3 +4,9 @@ iiitarget/
 .classpath
 .project
 *.log
+
+target/
+*.class
+*.war
+*.jar
+
